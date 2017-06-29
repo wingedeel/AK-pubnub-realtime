@@ -1,3 +1,8 @@
+<!-- 
+Based on
+https://www.pubnub.com/blog/2014-10-08-fun-with-d3js-data-visualization-eye-candy-with-streaming-json/
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +13,19 @@
 	<link rel = "stylesheet" type = "text/css" href = "style.css" />
 </head>
 <body>
-	<h1>D3 Bubble Chart (with real-time data)</h1>
+	<div align="center">
+	<h1>PubNub Global Traffic real-time data stream</h1>
 
+	<input type="button" id="toggle" value="Stop Data Stream">
+	
 	<section id="graph"></section>
+	</div>
+
 
 	<script>
+
+
+
 
 	var diameter = 600;
 
@@ -80,9 +93,10 @@
 }
 
 
-	/* PubNub */
+	/* PubNub global traffic*/
 
 	var channel = 'rts-xNjiKP4Bg4jgElhhn9v9';
+
 
 	var pubnub = PUBNUB.init({
 		subscribe_key: 'e19f2bb0-623a-11df-98a1-fbd39d75aa3f',
@@ -115,6 +129,25 @@
 
 
 	getData();
+
+	// UI
+	var button = document.getElementById('toggle');
+
+	var isRunning = true;
+	button.addEventListener('click', function(e){
+		if(isRunning) {
+			pubnub.unsubscribe({
+				channel: channel
+			});
+			button.value = 'Start Data Stream';
+			isRunning = false;
+		} else {
+			getData();
+			button.value = 'Stop Data Stream';
+			isRunning = true;
+		}
+		
+	}, false);
 
 	</script>
 

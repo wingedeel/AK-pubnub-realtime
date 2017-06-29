@@ -10,31 +10,50 @@ section {
 h1 {
   font-weight: normal;
   font-size: 2.4em;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 a {
   color: gold;
 }
+
+
+/* button */
+#toggle {
+  background-color: #3E606F;
+  border: none;
+  color: #FCFFF5;
+  font: 16px/50px "Bitter", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  height: 50px;
+  padding: 0 30px;
+  transition: background-color 150ms ease-in-out; 
+  margin-bottom: 20px;
+}
+#toggle:hover, #toggle:focus {
+    background-color: #598aa0;
+    outline: none; 
+}
+
 /* 
 ISO Country code by regions: http://www.geohive.com/earth/gen_codes.aspx
 */
 
 /* Northern America */
 .bm, .ca, .gl, .pm, .us,
-.noram {fill: #DF4949; background: #DF4949;}
+.noram {fill: #CF232B; background: #CF232B;}
 
 /* Latin America and the Caribbean */
 .ai, .ag, .aw, .bs, .bb, .bq, .vg, .ky, .cu, .cw, .dm, .do, .gp, .ht, .jm, .mq, .ms, .pr, .bl, .kn, .lc, .mf, .vc, .sx, .tt, .vi,
 .bz, .crr, .sv, .gt, .hn, .mx, .ni, .pa,
 .ar, .bo, .br, .cl, .co, .ec, .fk, .gf, .gy, .py, .pe, .sr, .uy, .ve,  
-.latam {fill: #E27A3F; background: #E27A3F;}
+.latam {fill: #FAA916; background: #FAA916;}
 
 /* Europe */
 .by, .bg, .cz, .hu, .md, .pl, .ro, .ru, .sk, .ua, 
 .ax, .dk, .ee, .fo, .fi, .gg, .is, .ie, .je, .lv, .lt, .im, .no, .sj, .se, .gb,
 .al, .ad, .ba, .hr, .gi, .gr, .va, .it, .mk, .mt, .me, .pt, .sm, .rs, .si, .es,
 .at, .be, .fr, .de, .li, .lu, .mc, .nl, .ch,
-.eu { fill: #EFC94C; background: #EFC94C;}
+.eu { fill: #124E78; background: #124E78;}
 
 /* Asia */
 .kz, .kg, .tj, .tm, .uz,
@@ -42,14 +61,14 @@ ISO Country code by regions: http://www.geohive.com/earth/gen_codes.aspx
 .af, .bd, .bt, .in, .ir, .mv, .np, .pk, .lk,
 .bn, .kh, .id, .la, .my, .mm, .ph, .sg, .th, .tl, .vn,
 .am, .az, .bh, .cy, .ge, .iq, .il, .jo, .kw, .lb, .ps, .om, .qa, .sa, .sy, .tr, .ae, .ye, 
-.asia { fill: #9B59B6; background:  #9B59B6;}
+.asia { fill: #F0F0C9; background:  #F0F0C9;}
 
 /* Oceania */
 .au, .cx, .cc, .nz, .nf,
 .fj, .nc, .pg, .sb, .vu,
 .gu, .ki, .mh, .fm, .nr, .mp, .pw,
 .as, .ck, .pf, .nu, .pn, .ws, .tk, .to, .tv, .wf,  
-.oceania {fill: #3498db; background: #3498db;}
+.oceania {fill: #F0F0C9; background: #F0F0C9;}
 
 /* Africa */
 .bi, .km, .dj, .er, .et, .ke, .mg, .mw, .mu, .yt, .mz, .re, .rw, .sc, .so, .tz, .ug, .zm, .zw,
